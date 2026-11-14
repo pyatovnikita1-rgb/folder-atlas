@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- One optical inset for legacy ICNS and runtime NSImage. The mark itself is unchanged. -->
+  <g transform="translate(512 512) scale(0.8728813559322034) translate(-512 -512)">
+    <rect x="40" y="40" width="944" height="944" rx="210" fill="#276863"/>
+    <rect x="226" y="214" width="290" height="596" rx="60" fill="#FFFEFB"/>
+    <rect x="584" y="214" width="216" height="266" rx="55" fill="#E4B18D"/>
+    <rect x="584" y="548" width="216" height="262" rx="55" fill="#AFC8B9"/>
+  </g>
+</svg>

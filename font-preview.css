@@ -1,0 +1,95 @@
+@font-face { font-family: "Nunito Sans"; src: url("assets/fonts/nunitosans.ttf") format("truetype"); font-weight: 200 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Golos Text"; src: url("assets/fonts/preview/GolosText-variable.ttf") format("truetype"); font-weight: 400 900; font-style: normal; font-display: swap; }
+@font-face { font-family: Oswald; src: url("assets/fonts/preview/Oswald-variable.ttf") format("truetype"); font-weight: 200 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("assets/fonts/preview/IBMPlexMono-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("assets/fonts/preview/IBMPlexMono-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("assets/fonts/preview/IBMPlexMono-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("assets/fonts/preview/IBMPlexMono-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: Unbounded; src: url("assets/fonts/preview/Unbounded-variable.ttf") format("truetype"); font-weight: 200 900; font-style: normal; font-display: swap; }
+
+/* Preview chrome always uses Inter, independently of the page selection. */
+.font-preview { color: #133D3A; background: #FFFDF8; border-bottom: 1px solid #CFD8CC; font: 400 12px/18px Inter, sans-serif; }
+.font-preview-panel { width: min(1152px, calc(100% - 96px)); margin-inline: auto; }
+.font-preview-summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; font: 600 13px/20px Inter, sans-serif; }
+.font-preview-panel .font-preview-summary::after { content: none; }
+.font-preview-current { font-weight: 400; color: #52675E; }
+.font-preview-toggle::after { content: 'Развернуть +'; font-weight: 400; }
+.font-preview-panel[open] .font-preview-toggle::after { content: 'Свернуть −'; }
+.font-options { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); margin: 0; padding: 0; border: 1px solid #CFD8CC; }
+.font-option { position: relative; min-width: 0; display: flex; flex-direction: column; padding: 12px; cursor: pointer; }
+.font-option + .font-option { border-left: 1px solid #CFD8CC; }
+.font-option input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.font-option:hover { background: #F7F3EA; }
+.font-option:has(input:checked) { background: #E2EADD; box-shadow: inset 0 -3px #146A64; }
+.font-option:has(input:focus-visible) { outline: 3px solid #146A64; outline-offset: 3px; z-index: 1; }
+.font-option-name { font-size: 11px; line-height: 16px; }
+.font-option-sample { display: block; margin-block: 6px; font-family: var(--sample-family); font-weight: var(--sample-weight); font-size: 30px; line-height: 40px; letter-spacing: -.8px; }
+.font-option-note { color: #52675E; font-size: 10px; line-height: 16px; }
+.font-preview-footer { display: flex; align-items: center; gap: 16px; padding-top: 12px; }
+.font-preview-scope { display: flex; align-items: center; gap: 8px; white-space: nowrap; cursor: pointer; min-height: 28px; }
+.font-preview-scope input { width: 16px; height: 16px; margin: 0; accent-color: #146A64; }
+.font-preview-scope:has(input:disabled) { color: #52675E; cursor: default; }
+.font-preview-hint { color: #52675E; }
+.font-preview-exit { margin-left: auto; white-space: nowrap; }
+.font-preview-status { color: #52675E; font-size: 11px; line-height: 18px; padding-block: 4px 12px; }
+
+:root[data-font-preview="original"] { --fa-font-display: "Nunito Sans", sans-serif; --preview-weight: 800; }
+:root[data-font-preview="golos-text"] { --fa-font-display: "Golos Text", sans-serif; --preview-weight: 650; }
+:root[data-font-preview="oswald"] { --fa-font-display: Oswald, sans-serif; --preview-weight: 500; }
+:root[data-font-preview="pt-serif"] { --fa-font-display: "PT Serif", serif; --preview-weight: 400; }
+:root[data-font-preview="ibm-plex-mono"] { --fa-font-display: "IBM Plex Mono", monospace; --preview-weight: 500; }
+:root[data-font-preview="unbounded"] { --fa-font-display: Unbounded, sans-serif; --preview-weight: 450; }
+:root[data-font-preview] :is(h1, h2, .brand) { font-weight: var(--preview-weight); }
+:root[data-font-preview] { font-synthesis: none; }
+:root[data-font-scope="all"]:not([data-font-preview="original"]) { --fa-font-body: var(--fa-font-display); }
+:root[data-font-preview="oswald"] h1 { font-size: 76px; line-height: 1.04; letter-spacing: -.8px; }
+:root[data-font-preview="oswald"] .display-heading { font-size: 56px; line-height: 1.12; letter-spacing: -.4px; }
+:root[data-font-preview="pt-serif"] :is(h1, h2, .brand) { letter-spacing: -.025em; }
+:root[data-font-preview="ibm-plex-mono"] h1 { font-size: 56px; line-height: 1.12; letter-spacing: -.055em; }
+:root[data-font-preview="ibm-plex-mono"] .display-heading { font-size: 40px; line-height: 1.2; letter-spacing: -.04em; }
+:root[data-font-preview="unbounded"] h1 { font-size: 52px; line-height: 1.16; letter-spacing: -.045em; }
+:root[data-font-preview="unbounded"] .display-heading { font-size: 36px; line-height: 1.24; letter-spacing: -.04em; }
+:root[data-font-preview="unbounded"] .brand { font-size: 24px; letter-spacing: -.045em; }
+:root[data-font-scope="all"] :is(.button, .step p) { font-size: 16px; }
+:root[data-font-scope="all"] .media-card figcaption { flex-wrap: wrap; }
+:root[data-font-preview="unbounded"][data-font-scope="all"] .button { padding-inline: 12px; }
+
+@media (max-width: 1100px) {
+  :root[data-font-preview="oswald"] h1 { font-size: 64px; }
+  :root[data-font-preview="ibm-plex-mono"] h1 { font-size: 48px; }
+  :root[data-font-preview="unbounded"] h1 { font-size: 44px; }
+  .font-option { padding: 10px 8px; }
+  .font-option-sample { font-size: 24px; }
+}
+@media (max-width: 800px) {
+  .font-preview-panel { width: calc(100% - 48px); }
+  .font-options { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .font-option:nth-of-type(4) { border-left: 0; }
+  .font-option:nth-of-type(n+4) { border-top: 1px solid #CFD8CC; }
+  .font-preview-footer { flex-wrap: wrap; gap: 8px 16px; }
+  .font-preview-hint { order: 3; width: 100%; }
+}
+@media (max-width: 520px) {
+  .font-preview-panel { width: calc(100% - 40px); }
+  .font-preview-summary { font-size: 12px; gap: 8px; }
+  .font-preview-current { display: block; font-size: 11px; }
+  .font-preview-toggle { white-space: nowrap; }
+  .font-option-sample { font-size: 20px; line-height: 28px; }
+  .font-option-name { font-size: 10px; line-height: 14px; }
+  .font-option-note { display: none; }
+  :root[data-font-preview="oswald"] h1 { font-size: 52px; }
+  :root[data-font-preview="oswald"] .display-heading { font-size: 42px; }
+  :root[data-font-preview="ibm-plex-mono"] h1 { font-size: 36px; }
+  :root[data-font-preview="ibm-plex-mono"] .display-heading { font-size: 30px; }
+  :root[data-font-preview="unbounded"] h1 { font-size: 34px; }
+  :root[data-font-preview="unbounded"] .display-heading { font-size: 28px; }
+  :root[data-font-preview="unbounded"] h2 { font-size: 25px; line-height: 1.25; }
+  :root[data-font-preview="unbounded"] .brand { font-size: 22px; }
+  :root[data-font-preview="unbounded"][data-font-scope="all"] .platform { font-size: 12px; }
+  :root[data-font-scope="all"] .site-footer { flex-wrap: wrap; }
+}
+@media (max-width: 360px) {
+  .font-option { padding: 8px 6px; }
+  .font-option-sample { font-size: 18px; }
+  :root[data-font-preview="unbounded"] h1 { font-size: 30px; }
+}
