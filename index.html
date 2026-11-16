@@ -4,38 +4,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F7F3EA">
-  <meta name="description" content="Folder Atlas — локальный анализатор диска для Mac. Папки и файлы в дереве и на наглядной карте. Найдите, что занимает место, и откройте нужное в Finder.">
-  <title>Folder Atlas — поймите, чем занят диск вашего Mac</title>
+  <meta data-i18n="description" data-i18n-attr="content" name="description" content="Folder Atlas — локальный анализатор диска для Mac. Папки и файлы в дереве и на наглядной карте. Найдите, что занимает место, и откройте нужное в Finder.">
+  <title data-i18n="title">Folder Atlas — поймите, чем занят диск вашего Mac</title>
   <link rel="icon" type="image/svg+xml" href="assets/brand.svg">
   <link rel="preload" href="assets/fonts/preview/PT_Serif-Web-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
-  <script src="font-preview.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261116-language">
+  <script src="app.js?v=20261116-release-038" defer></script>
+  <script src="font-preview.js?v=20261116-language" defer></script>
 </head>
 <body id="top">
-  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Перейти к содержанию</a>
   <div class="page-shell">
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Folder Atlas — в начало страницы">
+      <a class="brand" href="#top" data-i18n="brandLabel" data-i18n-attr="aria-label" aria-label="Folder Atlas — в начало страницы">
         <img src="assets/brand.svg" width="48" height="48" alt="">
         <span>Folder Atlas</span>
       </a>
-      <nav aria-label="Основная навигация">
-        <a href="#how-it-works">Как работает</a>
-        <a href="#roadmap">Планы</a>
-        <a href="#questions">Вопросы</a>
+      <div class="header-controls">
+      <nav data-i18n="navigationLabel" data-i18n-attr="aria-label" aria-label="Основная навигация">
+        <a href="#how-it-works" data-i18n="navHow">Как работает</a>
+        <a href="#roadmap" data-i18n="navPlans">Планы</a>
+        <a href="#questions" data-i18n="navQuestions">Вопросы</a>
       </nav>
+      <div class="language-switch" role="group" data-i18n="languageLabel" data-i18n-attr="aria-label" aria-label="Язык страницы" hidden>
+        <button type="button" data-language="ru" lang="ru" aria-label="Русский" aria-pressed="true">RU</button>
+        <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+      </div>
     </header>
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <h1 id="hero-title">Поймите, чем занят диск вашего Mac</h1>
-          <p class="hero-description">Увидьте большие папки и&nbsp;файлы на&nbsp;наглядной карте.</p>
+          <h1 id="hero-title" data-i18n="heroTitle">Поймите, чем занят диск вашего Mac</h1>
+          <p class="hero-description" data-i18n="heroDescription">Увидьте большие папки и&nbsp;файлы на&nbsp;наглядной карте.</p>
           <div class="download-group">
-            <a class="button button-primary" href="https://github.com/pyatovnikita1-rgb/folder-atlas/releases/download/v0.3.7/Folder-Atlas-0.3.7-macOS-arm64.zip" download>Скачать для macOS</a>
-            <p class="platform"><span class="laptop" aria-hidden="true"></span>Для Mac с Apple Silicon</p>
-            <p class="download-detail">Версия 0.3.7 · ZIP</p>
+            <a class="button button-primary" href="https://github.com/pyatovnikita1-rgb/folder-atlas/releases/download/v0.3.8/Folder-Atlas-0.3.8-macOS-arm64.zip" download data-i18n="download">Скачать для macOS</a>
+            <p class="platform"><span class="laptop" aria-hidden="true"></span><span data-i18n="platform">Для Mac с Apple Silicon</span></p>
+            <p class="download-detail" data-i18n="version">Версия 0.3.8 · ZIP</p>
 
           </div>
         </div>
@@ -43,107 +49,107 @@
           <div class="folder-cluster cluster-back" aria-hidden="true"><span></span><span></span></div>
           <div class="folder-cluster cluster-corner" aria-hidden="true"><span></span></div>
           <figure class="media-card">
-            <video id="overview-video" controls playsinline preload="metadata" poster="assets/overview.png" aria-label="Знакомство с Folder Atlas, 38 секунд, без звука" aria-describedby="overview-description">
+            <video id="overview-video" data-i18n="overviewLabel" data-i18n-attr="aria-label" controls playsinline preload="metadata" poster="assets/overview.png" aria-label="Знакомство с Folder Atlas, 38 секунд, без звука" aria-describedby="overview-description">
               <source src="assets/overview.mp4" type="video/mp4">
-              Ваш браузер не поддерживает встроенное видео. <a href="assets/overview.mp4">Открыть презентацию</a>.
+              <span data-i18n="videoFallback">Ваш браузер не поддерживает встроенное видео. </span><a href="assets/overview.mp4" data-i18n="overviewOpen">Открыть презентацию</a>.
             </video>
-            <figcaption><span>Знакомство с Folder Atlas <span class="media-duration">· 38 секунд</span></span><span class="silent-label">Без звука</span></figcaption>
+            <figcaption><span><span data-i18n="overviewCaption">Знакомство с Folder Atlas</span> <span class="media-duration" data-i18n="overviewDuration">· 38 секунд</span></span><span class="silent-label" data-i18n="silent">Без звука</span></figcaption>
           </figure>
-          <p class="media-note" id="overview-description">Демонстрационные данные. Дерево и карта — один взгляд на ваши файлы.</p>
+          <p class="media-note" id="overview-description" data-i18n="overviewDescription">Демонстрационные данные. Дерево и карта — один взгляд на ваши файлы.</p>
         </div>
       </section>
 
       <section class="steps-section" id="how-it-works" aria-labelledby="steps-title">
-        <h2 class="visually-hidden" id="steps-title">Три шага к понятному диску</h2>
+        <h2 class="visually-hidden" id="steps-title" data-i18n="stepsTitle">Три шага к понятному диску</h2>
         <ol class="steps">
-          <li class="step"><img src="assets/folder.svg" width="40" height="40" alt=""><p>Выберите диск<br>или папку</p></li>
-          <li class="step"><img src="assets/map.svg" width="40" height="40" alt=""><p>Найдите, что<br>занимает место</p></li>
-          <li class="step"><img src="assets/finder.png" width="40" height="40" alt=""><p>Удалите ненужное</p></li>
+          <li class="step"><img src="assets/folder.svg" width="40" height="40" alt=""><p data-i18n="stepChoose">Выберите диск<br>или папку</p></li>
+          <li class="step"><img src="assets/map.svg" width="40" height="40" alt=""><p data-i18n="stepFind">Найдите, что<br>занимает место</p></li>
+          <li class="step"><img src="assets/finder.png" width="40" height="40" alt=""><p data-i18n="stepRemove">Удалите ненужное</p></li>
         </ol>
       </section>
 
       <section class="walkthrough" aria-labelledby="walkthrough-title">
         <div class="walkthrough-copy">
-          <h2 class="display-heading" id="walkthrough-title">От общей картины&nbsp;—<br>к нужному файлу</h2>
-          <p>Выберите папку на карте, посмотрите её размер и&nbsp;перейдите к&nbsp;ней в&nbsp;Finder.</p>
+          <h2 class="display-heading" id="walkthrough-title" data-i18n="walkthroughTitle">От общей картины&nbsp;—<br>к нужному файлу</h2>
+          <p data-i18n="walkthroughCopy">Выберите папку на карте, посмотрите её размер и&nbsp;перейдите к&nbsp;ней в&nbsp;Finder.</p>
         </div>
         <div class="media-stage walkthrough-media">
           <div class="folder-cluster cluster-back" aria-hidden="true"><span></span><span></span></div>
           <figure class="media-card media-card-light">
-            <video id="walkthrough-video" controls playsinline preload="metadata" poster="assets/walkthrough.png" aria-label="Реальная демонстрация Folder Atlas, 27 секунд, без звука" aria-describedby="walkthrough-description">
+            <video id="walkthrough-video" data-i18n="walkthroughLabel" data-i18n-attr="aria-label" controls playsinline preload="metadata" poster="assets/walkthrough.png" aria-label="Реальная демонстрация Folder Atlas, 27 секунд, без звука" aria-describedby="walkthrough-description">
               <source src="assets/walkthrough.mp4" type="video/mp4">
-              Ваш браузер не поддерживает встроенное видео. <a href="assets/walkthrough.mp4">Открыть демонстрацию</a>.
+              <span data-i18n="videoFallback">Ваш браузер не поддерживает встроенное видео. </span><a href="assets/walkthrough.mp4" data-i18n="walkthroughOpen">Открыть демонстрацию</a>.
             </video>
-            <figcaption><span>Реальные действия <span class="media-duration">· 27 секунд</span></span><span class="silent-label">Без звука</span></figcaption>
+            <figcaption><span><span data-i18n="walkthroughCaption">Реальные действия</span> <span class="media-duration" data-i18n="walkthroughDuration">· 27 секунд</span></span><span class="silent-label" data-i18n="silent">Без звука</span></figcaption>
           </figure>
-          <p class="media-note" id="walkthrough-description">Запись приложения на контрольных данных. Карта, дерево и переход в Finder.</p>
+          <p class="media-note" id="walkthrough-description" data-i18n="walkthroughDescription">Запись приложения на контрольных данных. Карта, дерево и переход в Finder.</p>
         </div>
       </section>
 
       <section class="roadmap" id="roadmap" aria-labelledby="roadmap-title">
         <div class="roadmap-intro">
-          <p class="eyebrow">План развития</p>
-          <h2 id="roadmap-title">Что дальше в Folder Atlas</h2>
-          <p class="roadmap-description">Развиваем инструменты вокруг вашей карты диска.</p>
-          <p class="roadmap-timing">Сроки пока не назначены. Порядок может меняться.</p>
+          <p class="eyebrow" data-i18n="roadmapEyebrow">План развития</p>
+          <h2 id="roadmap-title" data-i18n="roadmapTitle">Что дальше в Folder Atlas</h2>
+          <p class="roadmap-description" data-i18n="roadmapDescription">Развиваем инструменты вокруг вашей карты диска.</p>
+          <p class="roadmap-timing" data-i18n="roadmapTiming">Сроки пока не назначены. Порядок может меняться.</p>
         </div>
         <div class="roadmap-map">
-          <img class="roadmap-art" src="assets/roadmap-map.png" width="1665" height="944" loading="lazy" decoding="async" alt="Три группы плиток плана развития: MCP, логи и история сканов.">
+          <img class="roadmap-art" data-i18n="roadmapAlt" data-i18n-attr="alt" src="assets/roadmap-map.png" width="1665" height="944" loading="lazy" decoding="async" alt="Три группы плиток плана развития: MCP, логи и история сканов.">
           <ol class="roadmap-items" role="list">
             <li class="roadmap-feature roadmap-feature-mcp">
-              <p class="roadmap-status roadmap-status-current">В работе</p>
-              <h3>Разбор диска<br> с агентом<br> через MCP</h3>
-              <p class="roadmap-copy">Обсудить результат, сохранить выводы и продолжить в новом чате.</p>
+              <p class="roadmap-status roadmap-status-current" data-i18n="inProgress">В работе</p>
+              <h3 data-i18n="mcpTitle">Разбор диска<br> с агентом<br> через MCP</h3>
+              <p class="roadmap-copy" data-i18n="mcpCopy">Обсудить результат, сохранить выводы и продолжить в новом чате.</p>
             </li>
             <li class="roadmap-feature roadmap-feature-feedback">
-              <p class="roadmap-status">В планах</p>
-              <h3>Обратная связь<br> и лог ошибки</h3>
-              <p class="roadmap-copy">Задать вопрос или отправить диагностику после просмотра.</p>
+              <p class="roadmap-status" data-i18n="planned">В планах</p>
+              <h3 data-i18n="feedbackTitle">Обратная связь<br> и лог ошибки</h3>
+              <p class="roadmap-copy" data-i18n="feedbackCopy">Задать вопрос или отправить диагностику после просмотра.</p>
             </li>
             <li class="roadmap-feature roadmap-feature-history">
-              <p class="roadmap-status">В планах</p>
-              <h3>История и сравнение сканов</h3>
-              <p class="roadmap-copy">Увидеть, что появилось, выросло или исчезло на диске.</p>
+              <p class="roadmap-status" data-i18n="planned">В планах</p>
+              <h3 data-i18n="historyTitle">История и сравнение сканов</h3>
+              <p class="roadmap-copy" data-i18n="historyCopy">Увидеть, что появилось, выросло или исчезло на диске.</p>
             </li>
           </ol>
         </div>
       </section>
 
       <section class="questions" id="questions" aria-labelledby="questions-title">
-        <div class="questions-intro"><p class="eyebrow">Понятно до первого скана</p><h2 id="questions-title">Несколько <br>важных вещей.</h2></div>
+        <div class="questions-intro"><p class="eyebrow" data-i18n="faqEyebrow">Понятно до первого скана</p><h2 id="questions-title" data-i18n="faqTitle">Несколько <br>важных вещей.</h2></div>
         <div class="faq-list">
           <details open>
-            <summary>Folder Atlas сам удаляет файлы?</summary>
-            <div class="answer"><p>Нет. Он помогает найти большие папки и&nbsp;файлы и&nbsp;показать их в&nbsp;Finder. Что оставить, а&nbsp;что удалить, решаете вы. Удаление выполняется вручную в&nbsp;Finder.</p></div>
+            <summary data-i18n="faqDeleteQuestion">Folder Atlas сам удаляет файлы?</summary>
+            <div class="answer"><p data-i18n="faqDeleteAnswer">Нет. Он помогает найти большие папки и&nbsp;файлы и&nbsp;показать их в&nbsp;Finder. Что оставить, а&nbsp;что удалить, решаете вы. Удаление выполняется вручную в&nbsp;Finder.</p></div>
           </details>
           <details>
-            <summary>Мои файлы куда-то отправляются?</summary>
-            <div class="answer"><p>Анализ выполняется локально на вашем Mac. Folder Atlas читает имена, структуру каталогов и&nbsp;метаданные, не открывая содержимое файлов. Результат скана сохраняется на компьютере.</p><p>Подключение внешнего AI-клиента через MCP — отдельное действие пользователя: такой клиент получает запрошенные данные сохранённого скана.</p></div>
+            <summary data-i18n="faqPrivacyQuestion">Мои файлы куда-то отправляются?</summary>
+            <div class="answer"><p data-i18n="faqPrivacyAnswer">Анализ выполняется локально на вашем Mac. Folder Atlas читает имена, структуру каталогов и&nbsp;метаданные, не открывая содержимое файлов. Результат скана сохраняется на компьютере.</p><p data-i18n="faqMcpAnswer">Подключение внешнего AI-клиента через MCP — отдельное действие пользователя: такой клиент получает запрошенные данные сохранённого скана.</p></div>
           </details>
           <details>
-            <summary>Размер на карте — это место, которое я освобожу?</summary>
-            <div class="answer"><p>Карта показывает выделенные блоки файлов и&nbsp;папок. Это не прогноз освобождаемого места: на диске могут быть общие блоки, сжатые файлы и&nbsp;снимки системы.</p><p>Недоступные папки отмечаются отдельно, поэтому результат может быть неполным. Неизвестный размер не означает пустую папку.</p></div>
+            <summary data-i18n="faqSizeQuestion">Размер на карте — это место, которое я освобожу?</summary>
+            <div class="answer"><p data-i18n="faqSizeAnswer">Карта показывает выделенные блоки файлов и&nbsp;папок. Это не прогноз освобождаемого места: на диске могут быть общие блоки, сжатые файлы и&nbsp;снимки системы.</p><p data-i18n="faqAccessAnswer">Недоступные папки отмечаются отдельно, поэтому результат может быть неполным. Неизвестный размер не означает пустую папку.</p></div>
           </details>
           <details>
-            <summary>Сканирование запускается автоматически?</summary>
-            <div class="answer"><p>Нет. Вы выбираете встроенный диск или отдельную папку и&nbsp;запускаете скан вручную. При следующем открытии можно вернуться к&nbsp;последнему сохранённому результату.</p></div>
+            <summary data-i18n="faqScanQuestion">Сканирование запускается автоматически?</summary>
+            <div class="answer"><p data-i18n="faqScanAnswer">Нет. Вы выбираете встроенный диск или отдельную папку и&nbsp;запускаете скан вручную. При следующем открытии можно вернуться к&nbsp;последнему сохранённому результату.</p></div>
           </details>
         </div>
       </section>
 
       <section class="final-cta" aria-labelledby="cta-title">
         <div class="folder-cluster cluster-footer" aria-hidden="true"><span></span><span></span><span></span></div>
-        <h2 id="cta-title">Работает локально на вашем Mac.</h2>
+        <h2 id="cta-title" data-i18n="ctaTitle">Работает локально на вашем Mac.</h2>
         <div class="download-group">
-          <a class="button button-primary" href="https://github.com/pyatovnikita1-rgb/folder-atlas/releases/download/v0.3.7/Folder-Atlas-0.3.7-macOS-arm64.zip" download>Скачать для macOS</a>
-          <p class="platform"><span class="laptop" aria-hidden="true"></span>Для Mac с Apple Silicon</p>
-            <p class="download-detail">Версия 0.3.7 · ZIP</p>
+          <a class="button button-primary" href="https://github.com/pyatovnikita1-rgb/folder-atlas/releases/download/v0.3.8/Folder-Atlas-0.3.8-macOS-arm64.zip" download data-i18n="download">Скачать для macOS</a>
+          <p class="platform"><span class="laptop" aria-hidden="true"></span><span data-i18n="platform">Для Mac с Apple Silicon</span></p>
+            <p class="download-detail" data-i18n="version">Версия 0.3.8 · ZIP</p>
 
         </div>
       </section>
     </main>
 
-    <footer class="site-footer"><span>Folder Atlas</span><span>Место для ясности.</span><a href="#top">Наверх <span aria-hidden="true">↑</span></a></footer>
+    <footer class="site-footer"><span>Folder Atlas</span><span data-i18n="footerTagline">Место для ясности.</span><a href="#top"><span data-i18n="backTop">Наверх</span> <span aria-hidden="true">↑</span></a></footer>
   </div>
 
 </body>

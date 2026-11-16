@@ -81,7 +81,14 @@ h2 { font-size: 32px; line-height: 40px; letter-spacing: -.025em; }
 .page-shell { width: min(1152px, calc(100% - 96px)); margin-inline: auto; }
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 24px; border-bottom: 1px solid var(--fa-color-border-default); }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font: 400 28px/36px var(--fa-font-display); letter-spacing: -.025em; white-space: nowrap; }
-.site-header nav { display: flex; gap: 48px; }
+.header-controls { display: flex; align-items: center; gap: 32px; }
+.site-header nav { display: flex; gap: 32px; }
+.language-switch { display: inline-flex; flex: none; padding: 3px; border: 1px solid var(--fa-color-border-default); border-radius: 10px; }
+.language-switch[hidden] { display: none; }
+.language-switch button { min-width: 34px; min-height: 34px; padding: 5px 7px; border: 0; border-radius: 7px; color: var(--fa-color-text-secondary); background: transparent; font: 600 13px/20px var(--fa-font-body); }
+.language-switch button:hover { color: var(--fa-color-text-primary); background: var(--fa-palette-disabled); }
+.language-switch button[aria-pressed="true"] { color: var(--fa-color-text-inverse); background: var(--fa-color-action-default); }
+.language-switch button:focus-visible { position: relative; z-index: 1; outline-offset: 3px; }
 .site-header nav a { text-decoration: none; font-size: 16px; line-height: 24px; padding-block: 8px; }
 .site-header nav a:hover, .site-footer a:hover { text-decoration: underline; }
 .hero { display: grid; grid-template-columns: minmax(0, 456px) minmax(0, 1fr); gap: 40px; align-items: center; padding-block: 88px 64px; }
@@ -181,6 +188,10 @@ summary::-webkit-details-marker { display: none; }
   .cluster-footer { opacity: .65; }
 }
 @media (max-width: 800px) {
+  .site-header { flex-wrap: wrap; row-gap: 16px; }
+  .header-controls { display: contents; }
+  .site-header nav { order: 3; width: 100%; }
+  .language-switch { margin-left: auto; }
   .page-shell { width: calc(100% - 48px); }
   .site-header nav { gap: 24px; }
   .hero { grid-template-columns: minmax(0, 1fr); gap: 64px; padding-block: 48px; }
@@ -202,7 +213,7 @@ summary::-webkit-details-marker { display: none; }
 }
 @media (max-width: 520px) {
   .page-shell { width: calc(100% - 40px); }
-  .site-header { flex-wrap: wrap; row-gap: 12px; padding-block: 16px; }
+  .site-header { flex-wrap: wrap; gap: 12px 8px; padding-block: 16px; }
   .brand { font-size: 24px; line-height: 32px; gap: 8px; }
   .site-header nav { width: 100%; gap: 24px; padding-left: 4px; }
   .site-header nav a { font-size: 14px; line-height: 20px; }
