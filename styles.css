@@ -120,6 +120,18 @@ h2 { font-size: 32px; line-height: 40px; letter-spacing: -.025em; }
 .walkthrough { display: grid; grid-template-columns: minmax(0, 352px) minmax(0, 1fr); gap: 64px; padding-block: 96px 72px; align-items: center; }
 .display-heading { font-size: 48px; line-height: 54px; letter-spacing: -1.2px; }
 .walkthrough-copy p { margin-top: 24px; color: var(--fa-color-text-secondary); }
+.roadmap { padding-block: 64px; border-top: 1px solid var(--fa-color-border-default); }
+.roadmap-intro { display: grid; grid-template-columns: minmax(0, 352px) minmax(0, 1fr); gap: 64px; align-items: end; }
+.roadmap-description { max-width: 560px; color: var(--fa-color-text-secondary); font-size: 16px; line-height: 26px; }
+.roadmap-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; list-style: none; margin: 40px 0 0; padding: 0; }
+.roadmap-step { position: relative; min-width: 0; }
+.roadmap-step:not(:last-child)::before { content: ""; position: absolute; top: 21px; left: 42px; right: -32px; border-top: 1px solid var(--fa-color-border-default); }
+.roadmap-marker { position: relative; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; margin-bottom: 24px; border: 1px solid var(--fa-palette-muted); border-radius: 50%; background: var(--fa-color-surface-page); color: var(--fa-color-text-secondary); font-size: 12px; line-height: 18px; }
+.roadmap-step-current .roadmap-marker { border-color: var(--fa-color-action-default); background: var(--fa-color-action-default); color: var(--fa-color-text-inverse); }
+.roadmap-status { margin-bottom: 12px; color: var(--fa-color-text-secondary); font-size: 12px; line-height: 18px; }
+.roadmap-step-current .roadmap-status { color: var(--fa-color-action-default); font-weight: 600; }
+.roadmap-step h3 { margin: 0 0 16px; font: 400 24px/32px var(--fa-font-display); letter-spacing: -.02em; }
+.roadmap-copy { color: var(--fa-color-text-secondary); font-size: 16px; line-height: 26px; }
 .questions { display: grid; grid-template-columns: minmax(0, 352px) minmax(0, 1fr); gap: 64px; padding-block: 64px; border-block: 1px solid var(--fa-color-border-default); }
 .eyebrow { font-size: 12px; line-height: 18px; letter-spacing: 1px; color: var(--fa-color-text-secondary); margin-bottom: 16px; }
 .faq-list details { border-bottom: 1px solid var(--fa-color-border-default); }
@@ -157,7 +169,7 @@ summary::-webkit-details-marker { display: none; }
   .hero { grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: 32px; }
   h1 { font-size: 52px; line-height: 58px; letter-spacing: -1.3px; }
   .hero-description { font-size: 20px; line-height: 30px; }
-  .walkthrough, .questions { grid-template-columns: minmax(0, .7fr) minmax(0, 1fr); gap: 40px; }
+  .walkthrough, .questions, .roadmap-intro { grid-template-columns: minmax(0, .7fr) minmax(0, 1fr); gap: 40px; }
   .display-heading { font-size: 40px; line-height: 46px; }
   .media-duration { display: block; }
   .cluster-footer { opacity: .65; }
@@ -179,6 +191,16 @@ summary::-webkit-details-marker { display: none; }
   .walkthrough-copy p { max-width: 440px; }
   .walkthrough-media { margin-inline: 8px; }
   .questions { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-block: 48px; }
+  .roadmap { padding-block: 48px; }
+  .roadmap-intro { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .roadmap-intro h2 br { display: none; }
+  .roadmap-list { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 32px; }
+  .roadmap-step { padding: 0 0 32px 66px; }
+  .roadmap-step:last-child { padding-bottom: 0; }
+  .roadmap-marker { position: absolute; top: 0; left: 0; margin: 0; }
+  .roadmap-step:not(:last-child)::before { top: 42px; bottom: 0; left: 21px; right: auto; border-top: 0; border-left: 1px solid var(--fa-color-border-default); }
+  .roadmap-status { padding-top: 2px; margin-bottom: 8px; }
+  .roadmap-step h3 br { display: none; }
   .questions-intro h2 br { display: none; }
   .cluster-footer { display: none; }
 }
@@ -207,7 +229,10 @@ summary::-webkit-details-marker { display: none; }
   .walkthrough { padding-block: 32px; gap: 40px; }
   .display-heading { font-size: 36px; line-height: 40px; letter-spacing: -.9px; }
   .walkthrough-copy p { margin-top: 20px; font-size: 16px; line-height: 26px; }
-  .questions { padding-block: 32px; }
+  .questions, .roadmap { padding-block: 32px; }
+  .roadmap-intro h2 { font-size: 28px; line-height: 36px; }
+  .roadmap-step { padding-left: 56px; }
+  .roadmap-step h3 { font-size: 22px; line-height: 28px; }
   .questions-intro h2 { font-size: 28px; line-height: 36px; }
   .answer { padding-right: 8px; }
   .final-cta { padding-block: 40px; }
