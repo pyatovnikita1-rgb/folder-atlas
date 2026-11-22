@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/brand.svg">
   <link rel="preload" href="assets/fonts/preview/PT_Serif-Web-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css?v=20261116-language">
-  <script src="app.js?v=20261116-release-038" defer></script>
+  <script src="app.js?v=20261122-release-039" defer></script>
   <script src="font-preview.js?v=20261116-language" defer></script>
 </head>
 <body id="top">
@@ -37,11 +37,11 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <h1 id="hero-title" data-i18n="heroTitle">Поймите, чем занят диск вашего Mac</h1>
-          <p class="hero-description" data-i18n="heroDescription">Увидьте большие папки и&nbsp;файлы на&nbsp;наглядной карте.</p>
+          <p class="hero-description" data-i18n="heroDescription">Найдите большие папки и файлы на карте. Спросите Codex, что можно очистить.</p>
           <div class="download-group">
-            <a class="button button-primary" href="https://github.com/pyatovnikita1-rgb/folder-atlas/releases/download/v0.3.8/Folder-Atlas-0.3.8-macOS-arm64.zip" download data-i18n="download">Скачать для macOS</a>
+            <a class="button button-primary" href="https://github.com/pyatovnikita1-rgb/folder-atlas/releases/download/v0.3.9/Folder-Atlas-0.3.9-macOS-arm64.zip" download data-i18n="download">Скачать для macOS</a>
             <p class="platform"><span class="laptop" aria-hidden="true"></span><span data-i18n="platform">Для Mac с Apple Silicon</span></p>
-            <p class="download-detail" data-i18n="version">Версия 0.3.8 · ZIP</p>
+            <p class="download-detail" data-i18n="version">Версия 0.3.9 · ZIP</p>
 
           </div>
         </div>
@@ -49,13 +49,14 @@
           <div class="folder-cluster cluster-back" aria-hidden="true"><span></span><span></span></div>
           <div class="folder-cluster cluster-corner" aria-hidden="true"><span></span></div>
           <figure class="media-card">
-            <video id="overview-video" data-i18n="overviewLabel" data-i18n-attr="aria-label" controls playsinline preload="metadata" poster="assets/overview.png" aria-label="Знакомство с Folder Atlas, 38 секунд, без звука" aria-describedby="overview-description">
+            <video id="overview-video" data-i18n="overviewLabel" data-i18n-attr="aria-label" controls playsinline preload="metadata" poster="assets/overview.png" aria-label="Разбор диска с Codex, 30 секунд, без звука" aria-describedby="overview-description">
               <source src="assets/overview.mp4" type="video/mp4">
-              <span data-i18n="videoFallback">Ваш браузер не поддерживает встроенное видео. </span><a href="assets/overview.mp4" data-i18n="overviewOpen">Открыть презентацию</a>.
+              <track kind="subtitles" srclang="en" label="English" src="assets/overview.en.vtt">
+              <span data-i18n="videoFallback">Ваш браузер не поддерживает встроенное видео. </span><a href="assets/overview.mp4" data-i18n="overviewOpen">Открыть разбор с Codex</a>.
             </video>
-            <figcaption><span><span data-i18n="overviewCaption">Знакомство с Folder Atlas</span> <span class="media-duration" data-i18n="overviewDuration">· 38 секунд</span></span><span class="silent-label" data-i18n="silent">Без звука</span></figcaption>
+            <figcaption><span><span data-i18n="overviewCaption">Разбор диска с Codex</span> <span class="media-duration" data-i18n="overviewDuration">· 30 секунд</span></span><span class="silent-label" data-i18n="silent">Без звука</span></figcaption>
           </figure>
-          <p class="media-note" id="overview-description" data-i18n="overviewDescription">Демонстрационные данные. Дерево и карта — один взгляд на ваши файлы.</p>
+          <p class="media-note" id="overview-description" data-i18n="overviewDescription">Нажмите «Разобрать с Codex» и отправьте готовый запрос. В ролике Codex находит две версии установщика и уточняет, какую сохранить.</p>
         </div>
       </section>
 
@@ -71,7 +72,7 @@
       <section class="walkthrough" aria-labelledby="walkthrough-title">
         <div class="walkthrough-copy">
           <h2 class="display-heading" id="walkthrough-title" data-i18n="walkthroughTitle">От общей картины&nbsp;—<br>к нужному файлу</h2>
-          <p data-i18n="walkthroughCopy">Выберите папку на карте, посмотрите её размер и&nbsp;перейдите к&nbsp;ней в&nbsp;Finder.</p>
+          <p data-i18n="walkthroughCopy">Выберите папку на карте и посмотрите, какие файлы занимают больше всего места.</p>
         </div>
         <div class="media-stage walkthrough-media">
           <div class="folder-cluster cluster-back" aria-hidden="true"><span></span><span></span></div>
@@ -82,7 +83,7 @@
             </video>
             <figcaption><span><span data-i18n="walkthroughCaption">Реальные действия</span> <span class="media-duration" data-i18n="walkthroughDuration">· 27 секунд</span></span><span class="silent-label" data-i18n="silent">Без звука</span></figcaption>
           </figure>
-          <p class="media-note" id="walkthrough-description" data-i18n="walkthroughDescription">Запись приложения на контрольных данных. Карта, дерево и переход в Finder.</p>
+          <p class="media-note" id="walkthrough-description" data-i18n="walkthroughDescription">Карта и дерево файлов в предыдущей версии Folder Atlas. В ролике показаны демонстрационные данные.</p>
         </div>
       </section>
 
@@ -98,8 +99,8 @@
           <ol class="roadmap-items" role="list">
             <li class="roadmap-feature roadmap-feature-mcp">
               <p class="roadmap-status roadmap-status-current" data-i18n="inProgress">В работе</p>
-              <h3 data-i18n="mcpTitle">Разбор диска<br> с агентом<br> через MCP</h3>
-              <p class="roadmap-copy" data-i18n="mcpCopy">Обсудить результат, сохранить выводы и продолжить в новом чате.</p>
+              <h3 data-i18n="mcpTitle">Первый запуск<br> с Codex</h3>
+              <p class="roadmap-copy" data-i18n="mcpCopy">Проверяем подключение через MCP и запрос доступа к папкам на чистой учётной записи Mac.</p>
             </li>
             <li class="roadmap-feature roadmap-feature-feedback">
               <p class="roadmap-status" data-i18n="planned">В планах</p>
@@ -124,7 +125,7 @@
           </details>
           <details>
             <summary data-i18n="faqPrivacyQuestion">Мои файлы куда-то отправляются?</summary>
-            <div class="answer"><p data-i18n="faqPrivacyAnswer">Анализ выполняется локально на вашем Mac. Folder Atlas читает имена, структуру каталогов и&nbsp;метаданные, не открывая содержимое файлов. Результат скана сохраняется на компьютере.</p><p data-i18n="faqMcpAnswer">Подключение внешнего AI-клиента через MCP — отдельное действие пользователя: такой клиент получает запрошенные данные сохранённого скана.</p></div>
+            <div class="answer"><p data-i18n="faqPrivacyAnswer">Анализ выполняется локально на вашем Mac. Folder Atlas читает имена, структуру каталогов и&nbsp;метаданные, не открывая содержимое файлов. Результат скана сохраняется на компьютере.</p><p data-i18n="faqMcpAnswer">Если вы подключите Codex или другого агента через MCP, он сможет запросить имена, пути и размеры из сохранённого снимка.</p></div>
           </details>
           <details>
             <summary data-i18n="faqSizeQuestion">Размер на карте — это место, которое я освобожу?</summary>
@@ -132,7 +133,7 @@
           </details>
           <details>
             <summary data-i18n="faqScanQuestion">Сканирование запускается автоматически?</summary>
-            <div class="answer"><p data-i18n="faqScanAnswer">Нет. Вы выбираете встроенный диск или отдельную папку и&nbsp;запускаете скан вручную. При следующем открытии можно вернуться к&nbsp;последнему сохранённому результату.</p></div>
+            <div class="answer"><p data-i18n="faqScanAnswer">Скан начинается по вашей команде. Выберите диск или папку в приложении либо попросите Codex просканировать их, пока Folder Atlas открыт. Готовый снимок можно открыть повторно.</p></div>
           </details>
         </div>
       </section>
@@ -141,9 +142,9 @@
         <div class="folder-cluster cluster-footer" aria-hidden="true"><span></span><span></span><span></span></div>
         <h2 id="cta-title" data-i18n="ctaTitle">Работает локально на вашем Mac.</h2>
         <div class="download-group">
-          <a class="button button-primary" href="https://github.com/pyatovnikita1-rgb/folder-atlas/releases/download/v0.3.8/Folder-Atlas-0.3.8-macOS-arm64.zip" download data-i18n="download">Скачать для macOS</a>
+          <a class="button button-primary" href="https://github.com/pyatovnikita1-rgb/folder-atlas/releases/download/v0.3.9/Folder-Atlas-0.3.9-macOS-arm64.zip" download data-i18n="download">Скачать для macOS</a>
           <p class="platform"><span class="laptop" aria-hidden="true"></span><span data-i18n="platform">Для Mac с Apple Silicon</span></p>
-            <p class="download-detail" data-i18n="version">Версия 0.3.8 · ZIP</p>
+            <p class="download-detail" data-i18n="version">Версия 0.3.9 · ZIP</p>
 
         </div>
       </section>

@@ -1,0 +1,27 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+What can you clean up?
+This example uses a saved scan of a demo folder.
+
+00:00:03.000 --> 00:00:08.000
+In Folder Atlas, select “Review with Codex”.
+
+00:00:08.000 --> 00:00:11.500
+Codex opens a draft. Edit it if you like, then send it.
+
+00:00:11.500 --> 00:00:15.000
+“Show what takes up the most space
+and recommend what to clean up first.”
+
+00:00:15.000 --> 00:00:19.200
+Codex found 48 MiB in Downloads, 80% of the demo folder.
+It recommended checking two installers first.
+
+00:00:19.200 --> 00:00:23.000
+Editor 2.1 uses 32 MiB.
+The older 2.0 installer uses 16 MiB.
+
+00:00:23.000 --> 00:00:30.000
+Codex asks, “Do you need version 2.0
+for older projects or to roll back?” Reply in the chat.
